@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="buildingCell" rowHeight="100" id="KGk-i7-Jjw" customClass="BuildingTableViewCell" customModule="PruebaiOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="109.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="awj-Z5-wYa">
+                        <rect key="frame" x="5" y="5.5" width="310" height="99"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="proyectos" translatesAutoresizingMaskIntoConstraints="NO" id="HNC-OC-7Xy">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="W7h-7g-3pV"/>
+                                    <constraint firstAttribute="width" constant="100" id="icO-Bj-3jt"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="m4d-mA-yWh">
+                                <rect key="frame" x="112" y="0.0" width="198" height="99"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edificio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4b-9W-KXo">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año de finalización:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Boh-wn-lOH">
+                                        <rect key="frame" x="0.0" y="25" width="198" height="24.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="gris_claro"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Área:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXO-Y1-Pnf">
+                                        <rect key="frame" x="0.0" y="49.5" width="198" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="gris_claro"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cotización:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzE-OL-jes">
+                                        <rect key="frame" x="0.0" y="74.5" width="198" height="24.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="gris_claro"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="awj-Z5-wYa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="6UE-Lm-rXg"/>
+                    <constraint firstItem="awj-Z5-wYa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="J1w-y6-jYI"/>
+                    <constraint firstAttribute="bottom" secondItem="awj-Z5-wYa" secondAttribute="bottom" constant="5" id="bxg-vI-4f0"/>
+                    <constraint firstAttribute="trailing" secondItem="awj-Z5-wYa" secondAttribute="trailing" constant="5" id="sH9-J9-LC7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="projectArea" destination="lXO-Y1-Pnf" id="cna-31-QnX"/>
+                <outlet property="projectBuilding" destination="f4b-9W-KXo" id="GN4-CH-VF2"/>
+                <outlet property="projectImage" destination="HNC-OC-7Xy" id="fJe-in-eab"/>
+                <outlet property="projectPrice" destination="yzE-OL-jes" id="I7J-Od-Khj"/>
+                <outlet property="projectYear" destination="Boh-wn-lOH" id="zXg-as-m3O"/>
+            </connections>
+            <point key="canvasLocation" x="26" y="80"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="proyectos" width="529" height="529"/>
+        <namedColor name="gris_claro">
+            <color red="0.89800000190734863" green="0.89800000190734863" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
