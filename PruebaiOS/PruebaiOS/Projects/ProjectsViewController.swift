@@ -11,11 +11,13 @@ import UIKit
 class ProjectsViewController: UIViewController {
 
     let projectsDataModel = ProjectsDataModel()
-    var showInProgress: Bool = false
+    var showInProgress: Bool = true
     var imagesProjects: [UIImage?] = []
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var labelProjectsStatus: UILabel!
+    let buttonBar = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,11 +29,31 @@ class ProjectsViewController: UIViewController {
         setUpView()
     }
     
-
+    @IBAction func changeView(_ sender: UISegmentedControl) {
+       
+        if self.segmentedControl.selectedSegmentIndex == 1 {
+            self.showInProgress = false
+            self.labelProjectsStatus.text = "   Proyectos Finalizados"
+        }else{
+            self.showInProgress = true
+            self.labelProjectsStatus.text = "   Proyectos en Proceso"
+        }
+        
+        UIView.transition(with: tableView, duration: 0.35, options: .transitionCrossDissolve, animations: {
+            self.tableView.reloadData()
+        }, completion: { _ in
+            UIView.animate(withDuration: 0.3, animations: {
+                self.buttonBar.frame.origin.x = (self.segmentedControl.frame.width / CGFloat(self.segmentedControl.numberOfSegments)) * CGFloat(self.segmentedControl.selectedSegmentIndex)
+            })
+        })
+        
+    }
+    
     func setUpView(){
         
         segmentedControl.backgroundColor = .clear
         segmentedControl.tintColor = .clear
+        segmentedControl.selectedSegmentIndex = 0
         
         segmentedControl.setTitleTextAttributes([
             NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.light),
@@ -46,11 +68,12 @@ class ProjectsViewController: UIViewController {
         
         segmentedControl.backgroundColor = UIColor(named: "negro")!
         
-        let buttonBar = UIView()
         // This needs to be false since we are using auto layout constraints
         buttonBar.translatesAutoresizingMaskIntoConstraints = false
         buttonBar.backgroundColor = UIColor(named: "azul")
         view.addSubview(buttonBar)
+        
+        buttonBar.frame.origin.x = 0
         buttonBar.topAnchor.constraint(equalTo: segmentedControl.bottomAnchor).isActive = true
         buttonBar.heightAnchor.constraint(equalToConstant: 5).isActive = true
         buttonBar.leftAnchor.constraint(equalTo: segmentedControl.leftAnchor).isActive = true

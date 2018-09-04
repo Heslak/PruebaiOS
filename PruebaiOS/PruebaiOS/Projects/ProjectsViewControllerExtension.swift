@@ -30,11 +30,32 @@ extension ProjectsViewController:  UITableViewDelegate, UITableViewDataSource {
         } else {
             building = ActiveSession.sharedInstance.Finished[indexPath.row]
         }
-
+   
+        
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        
+        let calendar: Calendar = Calendar.init(identifier: Calendar.Identifier.gregorian)
+        
+        if let date = dateFormatterGet.date(from: building.limitDate) {
+            let year = calendar.component(Calendar.Component.year, from: date)
+            cell.projectYear.text = "Año de finalización: \(year)"
+        }
+        
+        
+        
+        let currencyFormatter = NumberFormatter()
+        currencyFormatter.usesGroupingSeparator = true
+        currencyFormatter.numberStyle = .currency
+        // localize to your grouping and decimal separator
+        currencyFormatter.locale = Locale.current
+        
+        if let priceString = currencyFormatter.string(from: NSNumber(integerLiteral: building.price)) {
+            cell.projectPrice.text = "Cotización: \(priceString)"
+        }
+            
         cell.projectBuilding.text = building.name
-        cell.projectYear.text = "Año de finalización: \(building.limitDate)"
-        cell.projectArea.text = "Área: \(building.area)"
-        cell.projectPrice.text = "Cotización: \(building.price)"
+        cell.projectArea.text = "Área: \(building.area) m2"
         
         if let data = building.image {
             cell.projectImage.image = UIImage(data: data)

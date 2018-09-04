@@ -42,19 +42,19 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año de finalización:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Boh-wn-lOH">
                                         <rect key="frame" x="0.0" y="25" width="198" height="24.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" name="gris_claro"/>
+                                        <color key="textColor" name="gris_obscuro"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Área:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXO-Y1-Pnf">
                                         <rect key="frame" x="0.0" y="49.5" width="198" height="25"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" name="gris_claro"/>
+                                        <color key="textColor" name="gris_obscuro"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cotización:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzE-OL-jes">
                                         <rect key="frame" x="0.0" y="74.5" width="198" height="24.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" name="gris_claro"/>
+                                        <color key="textColor" name="gris_obscuro"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -82,8 +82,8 @@
     </objects>
     <resources>
         <image name="proyectos" width="529" height="529"/>
-        <namedColor name="gris_claro">
-            <color red="0.89800000190734863" green="0.89800000190734863" blue="0.90200001001358032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="gris_obscuro">
+            <color red="0.50999999046325684" green="0.49399998784065247" blue="0.49399998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -19,7 +19,7 @@ struct Building: Decodable {
     let progress: Int
     let area: Int
     let status: String
-    //let location:
+    let location: Location
     let price: Int
     let gallery: [String]
     let name: String
@@ -28,6 +28,6 @@ struct Building: Decodable {
 
     enum CodingKeys: String,CodingKey{
         case id = "_id"
-        case description,license,builder,services,limitDate,progress,area,price,gallery,status,name,image
+        case description,license,builder,services,limitDate,progress,area,price,gallery,status,name,image,location
     }
 }
